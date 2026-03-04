@@ -1,11 +1,12 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
+import icon from "./icon.png";
 
 export const metadata: Metadata = {
   title: "Amit Kumar | Creative Developer & AI Enthusiast",
   description: "Portfolio of Amit Kumar — Salesforce Architect, COO at Hacker's Unity, and Full Stack Developer.",
   icons: {
-    icon: "/favicon.png",
+    icon: icon.src,
   },
 };
 
