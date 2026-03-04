@@ -9,7 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@react-three/fiber": "^9.5.0",
+    "@react-three/fiber": "^8.16.0",
     "@types/three": "^0.183.1",
     "framer-motion": "^12.34.5",
     "lucide-react": "^0.576.0",
