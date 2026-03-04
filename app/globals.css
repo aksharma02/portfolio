@@ -1,27 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800;900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@layer base {
+  body {
+    @apply bg-dev-black text-white font-['Inter'] antialiased;
+  }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-['Inter'] tracking-tight;
+  }
+
+  ::selection {
+    @apply bg-dev-orange text-white;
+  }
+
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #0D0D0D;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #333;
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-dev-orange/50;
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-}
-
 @layer utilities {
-  .text-balance {
-    text-wrap: balance;
+  .text-outline {
+    -webkit-text-stroke: 1.5px rgba(255, 255, 255, 0.12);
+    /* Increased from 0.05 to 0.12 */
+    color: transparent;
+  }
+
+  .text-outline-bright {
+    -webkit-text-stroke: 1px rgba(234, 88, 12, 0.8);
+    /* orange outline */
+    color: transparent;
   }
 }
